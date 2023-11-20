@@ -29,13 +29,17 @@ print(df_kwu)
 # 데이터프레임을 csv파일로 저장
 #  - csv(,를 구분자로 하는 데이터 저장 방법)
 #  - ex) "광주여대", "3학년", "22"
-df_kwu.to_csv("./file.csv",
-              header=True,
-              index=False,
-              encoding="UTF-8")
+df_kwu.to_csv("./file.csv",  # 경로(위치)+파일명
+              header=True,             # 제목열(column) 저장?
+              index=False,             # index 저장 여부?
+              encoding="UTF-8")        # 데이터 포맷
 
 # csv 파일 불러와서 데이터프레임으로 사용하기!
-df = pd.read_csv("./file.csv", sep=",")
+
+df = pd.read_csv("./file.csv",  # 경로(위치)+파일명
+                 sep=",")  # 구분자: 데이터를 어떤걸로 구분할 것인가?
+                           # CSV: C:콤마 → 구분자로 사용하는 방법
+                           # ex) 체리, 10, 여
 print(df)
 
 print("=" * 50)
@@ -56,6 +60,3 @@ print(df.info())
 
 # 숫자 데이터만 출력!(빈도수, 평균, 표준편차, 최소값, 최대값 등)
 print(df.describe())
-
-
-
