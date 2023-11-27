@@ -71,4 +71,3 @@ plt.bar(subject, grade)  # 막대 그래프
 plt.ylim(0, 100)   # y축 범위
 plt.text(0, 90, "Good!")  # 조건 달성시 text 출력
 plt.show()
-
